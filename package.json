@@ -1,7 +1,7 @@
 {
   "name": "@cloudware-casper/casper-pin-input",
   "main": "casper-pin-input.js",
-  "version": "y",
+  "version": "1.0.1",
   "description": "Customised input with digit boxes to collect numbers or amounts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
