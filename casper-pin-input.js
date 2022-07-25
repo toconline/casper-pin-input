@@ -541,6 +541,17 @@ class CasperPinInput extends LitElement {
   }
 
   _focusNext () {
+
+
+    this.dispatchEvent(
+      new CustomEvent('on-focus-next', {
+        detail: {
+          element: this
+        }
+      })
+    );
+
+
     const tabbables = (this.parentElement || this.parentNode).querySelectorAll('[tabindex]');
     if ( tabbables ) {
       tabbables.forEach((element, index) => {
