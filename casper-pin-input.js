@@ -179,7 +179,6 @@ class CasperPinInput extends LitElement {
     this._input.value = this.value;
     this._input.selectionStart = this._input.selectionEnd = 0;
     if ( this.value !== '' && this.value !== '.' ) {
-      console.log('forcing update on', this.id)
       this.requestUpdate();
     }
   }
@@ -208,6 +207,9 @@ class CasperPinInput extends LitElement {
       this.errorMessage = undefined;
       if ( this.type === 'euro' ) {
         this.value = this._convertEuro(this.value);
+      }
+      if ( this._input ) {
+        this._input.value = this.value;
       }
     }
   }
@@ -484,8 +486,6 @@ class CasperPinInput extends LitElement {
     }
 
     let value = (event.clipboardData || window.clipboardData).getData('text');
-
-    console.log("pasted: ", value);
 
     event.preventDefault();
 
