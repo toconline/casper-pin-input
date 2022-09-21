@@ -175,6 +175,11 @@ class CasperPinInput extends LitElement {
   //***************************************************************************************//
 
   firstUpdated (changedProperties) {
+    if ( changedProperties.has('value') ) {
+      if ( this.type === 'euro' ) {
+        this.value = this._convertEuro(this.value);
+      }
+    }
     this._input = this.shadowRoot.getElementById('input');
     this._input.value = this.value;
     this._input.selectionStart = this._input.selectionEnd = 0;
@@ -205,9 +210,6 @@ class CasperPinInput extends LitElement {
 
     if ( changedProperties.has('value') ) {
       this.errorMessage = undefined;
-      if ( this.type === 'euro' ) {
-        this.value = this._convertEuro(this.value);
-      }
       if ( this._input ) {
         this._input.value = this.value;
       }
@@ -457,10 +459,20 @@ class CasperPinInput extends LitElement {
             const ilen = input.value.indexOf('.') === - 1 ? input.value.length : input.value.indexOf('.');
             const pad  = this._integerWidth - ilen;
 
-            input.selectionStart = input.selectionEnd = element.digitIdx - pad + 1;
+            if ( element.digitIdx >= this._integerWidth ) {
+              input.selectionStart = input.selectionEnd = element.digitIdx - pad + 1;
+            } else {
+              if ( element.digitIdx >= pad ) {
+                input.selectionStart = input.selectionEnd = element.digitIdx - pad + 1;
+              } else {
+                input.selectionStart = input.selectionEnd = 0;
+              }
+            }
+
           } else {
             input.selectionStart = this._input.selectionEnd = element.digitIdx;
           }
+
           this.requestUpdate();
         }
       }
