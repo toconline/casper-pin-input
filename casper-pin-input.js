@@ -282,7 +282,7 @@ class CasperPinInput extends LitElement {
         case '#':
           selected = '';
           if (input && this.focused && input.selectionEnd !== input.selectionStart ) {
-            if ( (idx - pad) >= input.selectionStart && (idx - pad) < input.selectionEnd ) {
+            if ( (idx - pad) >= input.selectionStart && (idx - pad) < input.selectionEnd && displayValue[idx] !== undefined ) {
               selected = ' digit-selected';
             }
           }
