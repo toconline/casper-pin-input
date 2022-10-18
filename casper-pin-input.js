@@ -50,12 +50,12 @@ class CasperPinInput extends LitElement {
     .digits {
       display: flex;
       position: relative;
+      gap: 4px;
     }
 
     .digit {
       width: 24px;
       height: 34px;
-      margin-right: 6px;
       font-size: 24px;
       text-align: center;
       color: var(--primary-text-color, #000);
