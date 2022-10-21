@@ -450,7 +450,9 @@ class CasperPinInput extends LitElement {
   }
 
   _click ( event ) {
-    event.path.forEach(element => {
+
+    const targetPath = event.composedPath();
+    event.composedPath().forEach(element => {
       if ( element instanceof HTMLElement && element.digitIdx !== undefined ) {
         const input = this._input;
         if ( input ) {
