@@ -1,5 +1,5 @@
 {
-  "name": "@cloudware-casper/casper-pin-input",
+  "name": "@toconline/casper-pin-input",
   "main": "casper-pin-input.js",
   "version": "1.0.10",
   "description": "Customised input with digit boxes to collect numbers or amounts",
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@cloudware-casper/casper-icons": "^3.x"
+    "@toconline/casper-icons": "^3.x"
   }
 }
