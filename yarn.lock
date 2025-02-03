@@ -2,25 +2,25 @@
 # yarn lockfile v1
 
 
-"@cloudware-casper/casper-icons@^3.x":
-  version "3.2.4"
-  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-icons/3.2.4/d452d083556f87141c6de429cf2967a260feb4b3bbc1b9b0a4ff3327eb9066d0#1e684cd3cd88096e0e54fbce5882fc0a7ca2ac31"
-  integrity sha512-HqRsYQkX0CXQnRv3SPcWhchgJ4rX8PogfJ3JfMJyJ6d8p0Yz1u9az0VvTBU9W8qov3KfvIAHZmtSphq3UQKH2w==
-  dependencies:
-    ink-ripple alex-saunders/ink-ripple
-    lit "^2.x"
-
 "@lit/reactive-element@^1.3.0":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.3.2.tgz#43e470537b6ec2c23510c07812616d5aa27a17cd"
   integrity sha512-A2e18XzPMrIh35nhIdE4uoqRzoIpEU5vZYuQN4S3Ee1zkGdYC27DP12pewbw/RLgPHzaE4kx/YqxMzebOpm0dA==
+
+"@toconline/casper-icons@^3.x":
+  version "3.2.6"
+  resolved "https://npm.pkg.github.com/download/@toconline/casper-icons/3.2.6/157a96d60ac922bbc38294b02c1de2b7617e4f36#157a96d60ac922bbc38294b02c1de2b7617e4f36"
+  integrity sha512-zl1H4WLCQP7poxEi5Uq1ZAY1EmbGUlAh0QoTloZ7f8ErVKg66/Q70GkgRuL7jnCySa7TWwOxj2wtHktuouksUw==
+  dependencies:
+    ink-ripple alex-saunders/ink-ripple
+    lit "^2.x"
 
 "@types/trusted-types@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
-ink-ripple@alex-saunders/ink-ripple:
+"ink-ripple@github:alex-saunders/ink-ripple":
   version "0.0.0"
   resolved "https://codeload.github.com/alex-saunders/ink-ripple/tar.gz/88e4d753bba9f7b57b372c62a4517bb091c7f713"
 

@@ -7,7 +7,7 @@
  */
 
 import { html, css, LitElement } from 'lit';
-import '@cloudware-casper/casper-icons/casper-icons.js';
+import '@toconline/casper-icons/casper-icons.js';
 
 class CasperPinInput extends LitElement {
 
